@@ -37,9 +37,11 @@
     position: relative;
     margin-right: auto;
     margin-left: 25px;
+
     .menu {
       list-style: none;
       display: flex;
+
       .menu-item {
         display: flex;
         align-items: center;
@@ -58,7 +60,8 @@
           line-height: 3px;
           white-space: nowrap;
           position: relative;
-          margin: 0px 15px 0 3px; 
+          margin: 0px 15px 0 3px;
+
           &:hover {
             &::after {
               content: "";
@@ -75,18 +78,37 @@
       }
     }
   }
+
+  .login-btn {
+   background-color: rgba(0, 0, 0, 0.6); 
+   color: #f9f9f9;
+   border: 1px solid #f9f9f9;
+   padding: 8px 16px;
+   text-align: center;
+   border-radius: 4px;
+   letter-spacing: 1.5px;
+   text-transform: uppercase;
+   transition: all .2s ease-out 0s;
+
+    &:hover {
+      background-color: #f9f9f9;
+      color: #000;
+      border-color: transparent;
+    }
+  }
 }
 
 @keyframes slide-in {
-    0% {
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-    100% {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
   }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
 
 @media (max-width: 768px) {
   .header {

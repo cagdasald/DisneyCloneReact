@@ -7,8 +7,18 @@ import watchlist from "../../assets/images/watchlist-icon.svg";
 import search from "../../assets/images/search-icon.svg";
 import series from "../../assets/images/series-icon.svg";
 import original from "../../assets/images/original-icon.svg";
+import { auth, provider } from "../../firebase";
 
-const Header = () => {
+const Header = (props) => {
+
+  const handleAuth = () => {
+    auth.signInWithPopup(provider).then((result) => {
+      console.log(result)
+    }).catch((error) => { 
+      console.log(error)
+    })
+  }
+
   return (
     <nav className="header" id="header">
       <a href="./" className="logo-wrapper">
@@ -47,6 +57,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      <button onClick={handleAuth} className="login-btn">Login</button>
     </nav>
   );
 };
