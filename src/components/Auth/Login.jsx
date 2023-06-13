@@ -9,7 +9,7 @@ const Login = () => {
       <div className="content">
         <div className="cta">
           <img className="cta-logo" src={CtaLogo} alt="ctn logo" />
-          <a className="signup-btn" href="./">
+          <a className="signup-btn" href="./login">
             GET ALL THERE
           </a>
           <p className="description">

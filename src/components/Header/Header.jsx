@@ -40,6 +40,7 @@ const Header = (props) => {
         .signInWithPopup(provider)
         .then((result) => {
           setUser(result.user);
+          history.push("/home")
         })
         .catch((error) => {
           alert(error.message);
@@ -49,7 +50,7 @@ const Header = (props) => {
         .signOut()
         .then(() => {
           dispatch(setSignOutState());
-          history.push("/");
+          history.push("/login");
         })
         .catch((err) => alert(err.message));
     }
@@ -69,7 +70,7 @@ const Header = (props) => {
 
   return (
     <nav className="header" id="header">
-      <a href={userName ? "/home" : "/"} className="logo-wrapper">
+      <a href={userName ? "/home" : "/login"} className="logo-wrapper">
         <img className="logo" src={logo} alt="disney-logo" />
       </a>
 
