@@ -15,7 +15,7 @@ import {
   selectUserPhoto,
   setUserLoginDetails,
   setSignOutState
-} from "../Features/User/userSlice";
+} from "../../Features/User/userSlice";
 import { useEffect } from "react";
 
 const Header = (props) => {
@@ -69,7 +69,7 @@ const Header = (props) => {
 
   return (
     <nav className="header" id="header">
-      <a href="./" className="logo-wrapper">
+      <a href={userName ? "/home" : "/"} className="logo-wrapper">
         <img className="logo" src={logo} alt="disney-logo" />
       </a>
 
@@ -90,35 +90,35 @@ const Header = (props) => {
 
               <li className="menu-item">
                 <img src={search} alt="home" />
-                <a className="item-title" href="./">
+                <a className="item-title" href="./search">
                   Search
                 </a>
               </li>
 
               <li className="menu-item">
                 <img src={watchlist} alt="home" />
-                <a className="item-title" href="./">
+                <a className="item-title" href="./watchlist">
                   Watchlist
                 </a>
               </li>
 
               <li className="menu-item">
                 <img src={original} alt="home" />
-                <a className="item-title" href="./">
+                <a className="item-title" href="./originals">
                   Originals
                 </a>
               </li>
 
               <li className="menu-item">
                 <img src={movie} alt="home" />
-                <a className="item-title" href="./">
+                <a className="item-title" href="./movies">
                   Movies
                 </a>
               </li>
 
               <li className="menu-item">
                 <img src={series} alt="home" />
-                <a className="item-title" href="./">
+                <a className="item-title" href="./series">
                   Series
                 </a>
               </li>
